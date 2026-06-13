@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Executive Committee 2025-2026 of GUCC Cyber Security Society – moderators, advisors, and student leaders.">
+    <meta name="description" content="Executive Committee 2025-2026 of GUCC Cyber Security Society – moderators, advisors, and student leaders with hierarchical view.">
     <meta name="keywords" content="GUCC, cybersecurity committee, executive committee 2025-2026, moderators, student leaders">
     <meta name="author" content="GUCC Cyber Security Society">
     <title>GUCC Cyber Security Society | Committee 2025-2026</title>
@@ -13,18 +13,43 @@
 </head>
 <body id="committee">
 
-    <!-- ==================== DYNAMIC COMPONENT PLACEHOLDERS ==================== -->
+    <!-- Dynamic components -->
     <div id="navbar-placeholder"></div>
     <div id="page-header-placeholder"></div>
 
-    <!-- ==================== COMMITTEE CONTENT (Dynamic) ==================== -->
-    <section class="committee">
-        <div class="container" id="committeeContainer">
-            <!-- Committee groups and members will be injected here by script.js -->
+    <!-- ==================== HIERARCHICAL COMMITTEE SECTION ==================== -->
+    <section class="committee-hierarchy">
+        <div class="container">
+            <!-- Moderator Tree (Top) -->
+            <div class="hierarchy-level level-1">
+                <h3 class="level-title">Moderator</h3>
+                <div class="members-horizontal" id="moderatorTree"></div>
+            </div>
+
+            <!-- Deputy Moderators (Level 2) -->
+            <div class="hierarchy-level level-2">
+                <h3 class="level-title">Deputy Moderators</h3>
+                <div class="members-horizontal" id="deputyModeratorTree"></div>
+            </div>
+
+            <!-- Executive Committee (Power hierarchy with lines) -->
+            <div class="hierarchy-level exec-level">
+                <h3 class="level-title">Executive Committee</h3>
+                <div class="exec-tree" id="executiveTree"></div>
+            </div>
+
+            <!-- Secretaries (Two parts: Red/Organizing/CTF/Blue) -->
+            <div class="secretaries-section">
+                <h3 class="level-title">Secretaries</h3>
+                <div class="secretaries-grid" id="secretariesGrid"></div>
+            </div>
+
+            <!-- Other Groups (Multimedia, Executive Members) as cards -->
+            <div id="otherGroupsContainer"></div>
         </div>
     </section>
 
-    <!-- ==================== CALL TO ACTION SECTION ==================== -->
+    <!-- ==================== CALL TO ACTION ==================== -->
     <section class="ctf-promo" style="padding: 60px 0;">
         <div class="container">
             <div class="ctf-promo-card" style="padding: 40px 20px;">
@@ -35,10 +60,8 @@
         </div>
     </section>
 
-    <!-- ==================== FOOTER PLACEHOLDER ==================== -->
     <div id="footer-placeholder"></div>
 
-    <!-- Scripts -->
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
