@@ -1,11 +1,117 @@
 /**
- * data.js – Central Content (Corrected Events & More)
+ * data.js – Central Content for GUCC Cyber Security Society (Professional Build)
+ * 
+ * This file contains ALL dynamic data for the website.
+ * Edit this ONE file to update events, committee members, blogs, stats, FAQs, favicon, etc.
+ * No need to touch any HTML or other JS files for content changes.
  */
 
 const siteData = {
-    // ... (keep all other sections same as before: pageHeaders, activeEvent, countdownTarget, features, stats, activities, blogs, aboutContent, committeeGroups, contactInfo, socialLinks, faq)
+    // ==================== FAVICON (Single source of truth) ====================
+    favicon: {
+        path: "favicon.png",   // Place your favicon.png in the root folder
+        type: "image/png"
+    },
 
-    // ==================== EVENTS (Corrected: no big date box, inline date) ====================
+    // ==================== PAGE HEADERS (Titles & Subtitles) ====================
+    pageHeaders: {
+        events: {
+            title: "Our Events",
+            subtitle: "Past and upcoming cybersecurity events, workshops, and competitions"
+        },
+        blogs: {
+            title: "Our Blogs",
+            subtitle: "Insights, stories, and technical writeups from the world of cybersecurity"
+        },
+        about: {
+            title: "About Us",
+            subtitle: "Who we are, what we do, and why cybersecurity matters"
+        },
+        committee: {
+            title: "Executive Committee 2025-2026",
+            subtitle: "GUCC Cyber Security Society – Leading the digital defense"
+        },
+        contact: {
+            title: "Contact Us",
+            subtitle: "Start the conversation — we're here to help and collaborate"
+        }
+    },
+
+    // ==================== ACTIVE EVENT (for banner on events page) ====================
+    activeEvent: {
+        name: "DeenSec CTF 2026",
+        date: "June 10, 2026",
+        location: "Online + GUCC Campus",
+        status: "upcoming",   // "upcoming" or "running"
+        ctaLink: "https://forms.google.com/your-registration-form",
+        ctaText: "Register Now"
+    },
+
+    // ==================== COUNTDOWN TARGET (for homepage) ====================
+    countdownTarget: "2026-06-10T00:00:00",
+
+    // ==================== FEATURES (Homepage) ====================
+    features: [
+        {
+            icon: "fa-laptop-code",
+            title: "Hands-on Training",
+            description: "Practical sessions on ethical hacking, Linux, and cybersecurity tools."
+        },
+        {
+            icon: "fa-flag-checkered",
+            title: "CTF Competitions",
+            description: "Regular Capture The Flag challenges to test your skills."
+        },
+        {
+            icon: "fa-users",
+            title: "Professional Network",
+            description: "Connect with industry experts and build your career."
+        }
+    ],
+
+    // ==================== STATISTICS (Homepage) ====================
+    stats: [
+        { label: "Workshops", value: 12 },
+        { label: "CTF Events", value: 8 },
+        { label: "Active Members", value: 150 },
+        { label: "Seminars", value: 6 }
+    ],
+
+    // ==================== ACTIVITIES (Homepage & About page) ====================
+    activities: [
+        {
+            icon: "fa-chalkboard-user",
+            title: "Workshops & Training",
+            description: "Hands-on ethical hacking, Linux, and security tools."
+        },
+        {
+            icon: "fa-microphone-alt",
+            title: "Seminars",
+            description: "Industry experts share insights on cyber threats."
+        },
+        {
+            icon: "fa-flag-checkered",
+            title: "CTF Competitions",
+            description: "Regular Capture The Flag challenges – from beginner to advanced."
+        },
+        {
+            icon: "fa-boot",
+            title: "Bootcamp",
+            description: "Intensive training on penetration testing and defense."
+        },
+        {
+            icon: "fa-handshake",
+            title: "Community Support",
+            description: "Learn real-world techniques in a collaborative environment."
+        },
+        {
+            icon: "fa-share-alt",
+            title: "Knowledge Sharing",
+            description: "Member-led tech talks and problem-solving sessions."
+        }
+    ],
+
+    // ==================== EVENTS (Compact – date as simple string) ====================
     events: [
         {
             title: "DeenSec CTF 2026",
@@ -78,6 +184,181 @@ const siteData = {
             location: "Online",
             badge: "✅ Completed",
             extra: "🏅 Winners Announced"
+        }
+    ],
+
+    // ==================== BLOGS (Blogs page) ====================
+    blogs: [
+        {
+            id: 1,
+            title: "Cybersecurity Threats to Futuristic AI",
+            category: "Artificial Intelligence",
+            summary: "Exploring the new battleground of AI-driven cyber threats. How adversarial attacks and model poisoning are reshaping security.",
+            imageUrl: "https://placehold.co/400x250/16213e/00d9ff?text=AI+Security",
+            readMoreLink: "#"
+        },
+        {
+            id: 2,
+            title: "'Zero Trust': New Horizons in Security",
+            category: "Security Model",
+            summary: "Why traditional perimeter-based security is failing. Learn how Zero Trust architecture works and why it's becoming essential.",
+            imageUrl: "https://placehold.co/400x250/16213e/00d9ff?text=Zero+Trust",
+            readMoreLink: "#"
+        },
+        {
+            id: 3,
+            title: "Know Your Enemy: Understanding Footprinting",
+            category: "Ethical Hacking",
+            summary: "The first step of any cyber attack – footprinting. Learn how ethical hackers gather intelligence and protect your digital footprint.",
+            imageUrl: "https://placehold.co/400x250/16213e/00d9ff?text=Footprinting",
+            readMoreLink: "#"
+        },
+        {
+            id: 4,
+            title: "CTF 101: Beginner's Guide to Capture The Flag",
+            category: "CTF Walkthrough",
+            summary: "Essential tools, techniques, and mindset for succeeding in your first CTF competition.",
+            imageUrl: "https://placehold.co/400x250/16213e/00d9ff?text=CTF+Tips",
+            readMoreLink: "#"
+        },
+        {
+            id: 5,
+            title: "Spot the Hook: How to Detect Phishing Emails",
+            category: "Awareness",
+            summary: "Real-world examples of phishing attacks and how to identify them before it's too late.",
+            imageUrl: "https://placehold.co/400x250/16213e/00d9ff?text=Phishing",
+            readMoreLink: "#"
+        },
+        {
+            id: 6,
+            title: "Basics of Cryptography: From Caesar to AES",
+            category: "Cryptography",
+            summary: "A gentle introduction to encryption, hashing, and digital signatures.",
+            imageUrl: "https://placehold.co/400x250/16213e/00d9ff?text=Crypto",
+            readMoreLink: "#"
+        }
+    ],
+
+    // ==================== ABOUT PAGE CONTENT ====================
+    aboutContent: {
+        tag: "Who We Are",
+        heading: "Empowering the Next Generation of Cyber Defenders",
+        description: "<strong>GUCC Cyber Security Society</strong> is a student-led organization dedicated to promoting cybersecurity awareness, ethical hacking skills, and professional development. We bring industry experts to train students through our exclusive bootcamp programs, workshops, and CTF competitions.",
+        description2: "Our mission is to create a community where students can learn, practice, and excel in the field of cybersecurity – regardless of their starting level. We believe that a secure digital future begins with educated and empowered defenders.",
+        highlights: [
+            "Cybersecurity Fundamentals",
+            "Defense Mechanisms",
+            "CTF Competitions",
+            "Strong Community",
+            "Career Guidance",
+            "Ethical Hacking Skills"
+        ],
+        buttonText: "Join Our Community",
+        buttonUrl: "contact.html",
+        buttonIcon: "fa-arrow-right",
+        imageUrl: "https://placehold.co/600x450/16213e/00d9ff?text=Cyber+Defenders",
+        imageAlt: "Cyber Security Team"
+    },
+
+    // ==================== COMMITTEE GROUPS ====================
+    committeeGroups: [
+        {
+            groupName: "Moderator Team",
+            icon: "fa-gavel",
+            members: [
+                { name: "Md. Monirul Islam", role: "Moderator", department: "" },
+                { name: "Montaser Abdul Quader", role: "Deputy Moderator", department: "" },
+                { name: "Feroza Nazin", role: "Deputy Moderator", department: "" }
+            ]
+        },
+        {
+            groupName: "Executive Committee",
+            icon: "fa-crown",
+            members: [
+                { name: "Mahady Hasan Fahim", role: "Chair", department: "" },
+                { name: "Md. Robiul Islam", role: "Vice Chair", department: "" },
+                { name: "Ashrafun Nahar Arifa", role: "General Secretary", department: "" },
+                { name: "Thiaba Rahman Methi", role: "Treasurer", department: "" }
+            ]
+        },
+        {
+            groupName: "Secretaries",
+            icon: "fa-tasks",
+            members: [
+                { name: "Nuren Abreshum Anonta", role: "Red Team Secretary", department: "" },
+                { name: "Md. Tanvir Hasan Abokash", role: "Organizing Secretary", department: "" },
+                { name: "Shoaib", role: "CTF Secretary", department: "" },
+                { name: "Abdullah", role: "Blue Team Secretary", department: "" }
+            ]
+        },
+        {
+            groupName: "Multimedia Specialists",
+            icon: "fa-video",
+            members: [
+                { name: "Rezanur Rahman Anan", role: "Multimedia Specialist", department: "" },
+                { name: "Md. Tarikul Islam Tuhen", role: "Multimedia Specialist", department: "" },
+                { name: "Shahta Jarab", role: "Multimedia Specialist", department: "" }
+            ]
+        },
+        {
+            groupName: "Executive Members",
+            icon: "fa-users",
+            members: [
+                { name: "Romana Zaman", role: "Executive Member", department: "" },
+                { name: "Md. Arman Hossain Rifat", role: "Executive Member", department: "" }
+            ]
+        }
+    ],
+
+    // ==================== CONTACT INFO CARDS ====================
+    contactInfo: [
+        {
+            icon: "fa-map-marker-alt",
+            title: "Our Address",
+            details: "Green University of Bangladesh<br>Purbachal American City, Kanchan, Rupganj, Narayanganj-1461, Dhaka<br>Bangladesh"
+        },
+        {
+            icon: "fa-envelope",
+            title: "Email Us",
+            details: "info@gucc.edu.bd<br>cyber@green.edu.bd"
+        },
+        {
+            icon: "fa-phone-alt",
+            title: "Call Us",
+            details: "+880 1234 567890<br>+880 1234 567891"
+        }
+    ],
+
+    // ==================== SOCIAL LINKS (Contact page) ====================
+    socialLinks: [
+        { platform: "Facebook", url: "https://www.facebook.com/share/1SPjmR4Rud/", icon: "fab fa-facebook-f" },
+        { platform: "WhatsApp", url: "https://chat.whatsapp.com/HrT836SLXMlDaeKJR9AGmx", icon: "fab fa-whatsapp" },
+        { platform: "Messenger", url: "https://m.me/j/AbYb911ubVITnupU/", icon: "fab fa-facebook-messenger" },
+        { platform: "Website", url: "https://gucc.green.edu.bd/", icon: "fas fa-globe" },
+        { platform: "GitHub", url: "https://github.com/gucc-cyber", icon: "fab fa-github" }
+    ],
+
+    // ==================== FAQ (Contact page) ====================
+    faq: [
+        {
+            icon: "fa-question-circle",
+            title: "How can I join?",
+            answer: "Fill out the membership form during our recruitment drive or contact us via email."
+        },
+        {
+            icon: "fa-calendar-alt",
+            title: "When are meetings?",
+            answer: "Weekly meetups every Thursday at 4 PM in the CSE department seminar room."
+        },
+        {
+            icon: "fa-laptop-code",
+            title: "Do I need prior experience?",
+            answer: "Not at all! Beginners are welcome. We have sessions for all skill levels."
+        },
+        {
+            icon: "fa-trophy",
+            title: "How do I participate in CTFs?",
+            answer: "We announce CTF competitions via social media and email. Just register and join."
         }
     ]
 };
