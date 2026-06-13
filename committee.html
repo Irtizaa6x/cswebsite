@@ -3,60 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Executive Committee 2025-2026 of GUCC Cyber Security Society – moderators, advisors, and student leaders with hierarchical view.">
+    <meta name="description" content="Executive Committee 2025-2026 of GUCC Cyber Security Society – moderators, advisors, and student leaders with horizontal card layout.">
     <meta name="keywords" content="GUCC, cybersecurity committee, executive committee 2025-2026, moderators, student leaders">
     <meta name="author" content="GUCC Cyber Security Society">
     <title>GUCC Cyber Security Society | Committee 2025-2026</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Fallback inline styles -->
     <style>
+        /* quick fallback – ensures cards don't break if CSS fails */
         body { background: #0a0a0f; color: #eef5ff; font-family: 'Inter', sans-serif; margin:0; padding:0; }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-        .navbar, .footer { background: #050510; padding: 1rem; text-align: center; }
-        .btn { display: inline-block; padding: 12px 28px; background: #00d9ff; color: #050510; border-radius: 40px; text-decoration: none; }
     </style>
 </head>
 <body id="committee">
 
-    <!-- ==================== DYNAMIC COMPONENT PLACEHOLDERS ==================== -->
     <div id="navbar-placeholder"></div>
     <div id="page-header-placeholder"></div>
 
-    <!-- ==================== HIERARCHICAL COMMITTEE SECTION ==================== -->
     <section class="committee-hierarchy">
         <div class="container">
-            <!-- Moderator Tree (Top) -->
+            <!-- Moderator -->
             <div class="hierarchy-level level-1">
                 <h3 class="level-title">Moderator</h3>
                 <div class="members-horizontal" id="moderatorTree"></div>
             </div>
 
-            <!-- Deputy Moderators (Level 2) -->
+            <!-- Deputy Moderators -->
             <div class="hierarchy-level level-2">
                 <h3 class="level-title">Deputy Moderators</h3>
                 <div class="members-horizontal" id="deputyModeratorTree"></div>
             </div>
 
-            <!-- Executive Committee (Power hierarchy with lines) -->
+            <!-- Executive Committee (tree with connectors) -->
             <div class="hierarchy-level exec-level">
                 <h3 class="level-title">Executive Committee</h3>
                 <div class="exec-tree" id="executiveTree"></div>
             </div>
 
-            <!-- Secretaries (Red, Organizing, CTF, Blue) -->
+            <!-- Secretaries -->
             <div class="secretaries-section">
                 <h3 class="level-title">Secretaries</h3>
                 <div class="secretaries-grid" id="secretariesGrid"></div>
             </div>
 
-            <!-- Other Groups (Multimedia, Executive Members) -->
+            <!-- Other groups (Multimedia, Executive Members) -->
             <div id="otherGroupsContainer"></div>
         </div>
     </section>
 
-    <!-- ==================== CALL TO ACTION ==================== -->
     <section class="ctf-promo" style="padding: 60px 0;">
         <div class="container">
             <div class="ctf-promo-card" style="padding: 40px 20px;">
@@ -67,10 +62,8 @@
         </div>
     </section>
 
-    <!-- ==================== FOOTER PLACEHOLDER ==================== -->
     <div id="footer-placeholder"></div>
 
-    <!-- Scripts (order matters) -->
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
