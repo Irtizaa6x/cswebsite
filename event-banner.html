@@ -1,0 +1,41 @@
+<!-- ==================== EVENT BANNER COMPONENT ==================== -->
+<!-- 
+  This file contains a dynamic banner that shows the next upcoming event
+  or a currently running event on the events page.
+  Content (event name, date, status) is filled automatically by script.js from data.js.
+  Loaded dynamically into <div id="event-banner"></div> placeholder on events.html only.
+-->
+
+<section class="event-banner" aria-label="Event notification banner">
+    <div class="container">
+        <div class="banner-content">
+            <!-- Status indicator with animated pulse -->
+            <div class="banner-status" id="banner-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Upcoming Event</span>
+            </div>
+            
+            <!-- Main event info -->
+            <div class="banner-event-info">
+                <h2 id="banner-event-name">DeenSec CTF 2026</h2>
+                <div class="banner-meta">
+                    <div class="banner-date">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                        <span id="banner-event-date">June 10, 2026</span>
+                    </div>
+                    <div class="banner-location">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <span id="banner-event-location">Online + GUCC Campus</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to action button -->
+            <div class="banner-action">
+                <a href="#" id="banner-cta-button" class="btn btn-glow" target="_blank" rel="noopener noreferrer">
+                    Register Now <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

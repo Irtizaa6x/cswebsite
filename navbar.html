@@ -1,0 +1,33 @@
+<!-- ==================== NAVBAR COMPONENT ==================== -->
+<!-- 
+  This file contains the complete navigation bar.
+  Edit logo, menu links, or colors here once → updates on every page.
+  Loaded dynamically by script.js into <div id="navbar"></div> placeholder.
+-->
+
+<nav class="navbar" aria-label="Main navigation">
+    <div class="nav-container">
+        <!-- Logo Section: Replace src with your actual logo image -->
+        <div class="logo">
+            <img src="logo.png" alt="GUCC Cyber Security Society Logo" class="logo-img">
+            <div class="logo-text">
+                GUCC <span class="logo-highlight">Cyber Security</span> Society
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" role="list">
+            <li role="listitem"><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+            <li role="listitem"><a href="events.html" class="nav-link" data-page="events">Events</a></li>
+            <li role="listitem"><a href="blogs.html" class="nav-link" data-page="blogs">Blogs</a></li>
+            <li role="listitem"><a href="about.html" class="nav-link" data-page="about">About</a></li>
+            <li role="listitem"><a href="committee.html" class="nav-link" data-page="committee">Committee</a></li>
+            <li role="listitem"><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>

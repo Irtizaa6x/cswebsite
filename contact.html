@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Contact GUCC Cyber Security Society – get in touch for inquiries, collaborations, membership, or event hosting.">
+    <meta name="keywords" content="contact GUCC, cybersecurity club email, reach us, Green University">
+    <meta name="author" content="GUCC Cyber Security Society">
+    <title>GUCC Cyber Security Society | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body id="contact">
+
+    <!-- ==================== DYNAMIC COMPONENT PLACEHOLDERS ==================== -->
+    <div id="navbar-placeholder"></div>
+    <div id="page-header-placeholder"></div>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Left: Contact cards & social (dynamic) -->
+                <div class="contact-info" id="contactInfo"></div>
+                
+                <!-- Right: Contact form (static) -->
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <p class="form-note">We'll get back to you within 24-48 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ SECTION (Dynamic) ==================== -->
+    <section class="stats" style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common inquiries</p>
+            </div>
+            <div class="faq-grid" id="faqGrid"></div>
+        </div>
+    </section>
+
+    <!-- ==================== MAP SECTION ==================== -->
+    <div class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.123456789012!2d90.5663123!3d23.8295015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755cb0a4c65ef27%3A0xf54f56affbffdc99!2sGreen%20University%20of%20Bangladesh!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0; filter: grayscale(10%);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    title="Green University Campus Map">
+                </iframe>
+                <div class="map-address">
+                    <p><i class="fas fa-map-marker-alt"></i> Green University of Bangladesh, Purbachal American City, Dhaka - 1229</p>
+                    <a href="https://www.google.com/maps/place/Green+University+of+Bangladesh/@23.8295015,90.5663123,17z/" target="_blank" rel="noopener noreferrer">Open in Google Maps <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER PLACEHOLDER ==================== -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="GUCC Cyber Security Society – Home of cybersecurity enthusiasts at Green University. Join us for workshops, CTFs, and community.">
+    <meta name="keywords" content="GUCC, cyber security, ethical hacking, CTF, Green University">
+    <meta name="author" content="GUCC Cyber Security Society">
+    <title>GUCC Cyber Security Society | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body id="index">
+
+    <!-- ==================== DYNAMIC COMPONENT PLACEHOLDERS ==================== -->
+    <div id="navbar-placeholder"></div>
+    <div id="page-header-placeholder" style="display: none;"></div> <!-- Hidden on homepage -->
+    <div id="event-banner-placeholder" style="display: none;"></div> <!-- Hidden on homepage -->
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">GUCC Cyber Security Society</h1>
+            <p class="hero-subtitle">Defending the Digital Frontier Together</p>
+            <p class="hero-description">Join our community of cybersecurity enthusiasts, ethical hackers, and future defenders. We empower students with skills, knowledge, and real-world experience.</p>
+            <div class="hero-buttons">
+                <a href="about.html" class="btn btn-primary">Learn More <i class="fas fa-arrow-right"></i></a>
+                <a href="events.html" class="btn btn-outline">View Events</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURES SECTION (Dynamic) ==================== -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid" id="featuresGrid"></div>
+        </div>
+    </section>
+
+    <!-- ==================== COUNTDOWN PROMO SECTION ==================== -->
+    <section class="ctf-promo">
+        <div class="container">
+            <div class="ctf-promo-card">
+                <span class="ctf-badge">🔥 Hot Event</span>
+                <h2>DeenSec CTF 2026</h2>
+                <p>Intra-University Capture The Flag Competition (Solo Format)</p>
+                <div class="countdown-wrapper">
+                    <div class="countdown-item"><span class="countdown-number" id="days">00</span><span class="countdown-label">Days</span></div>
+                    <div class="countdown-item"><span class="countdown-number" id="hours">00</span><span class="countdown-label">Hours</span></div>
+                    <div class="countdown-item"><span class="countdown-number" id="minutes">00</span><span class="countdown-label">Minutes</span></div>
+                    <div class="countdown-item"><span class="countdown-number" id="seconds">00</span><span class="countdown-label">Seconds</span></div>
+                </div>
+                <a href="contact.html" class="btn btn-register">Register Now <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== STATS SECTION (Dynamic) ==================== -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid" id="statsGrid"></div>
+        </div>
+    </section>
+
+    <!-- ==================== ACTIVITIES SECTION (Dynamic) ==================== -->
+    <section class="activities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Activities</h2>
+                <p>What makes us unique</p>
+            </div>
+            <div class="activities-grid" id="activitiesGrid"></div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER PLACEHOLDER ==================== -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
