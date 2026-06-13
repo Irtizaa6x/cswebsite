@@ -2,20 +2,21 @@
 <!-- 
   This file contains a dynamic banner that shows the next upcoming event
   or a currently running event on the events page.
-  Content (event name, date, status) is filled automatically by script.js from data.js.
-  Loaded dynamically into <div id="event-banner"></div> placeholder on events.html only.
+  Content (event name, date, location, status, CTA) is filled automatically 
+  by script.js from data.js (siteData.activeEvent).
+  Loaded dynamically into <div id="event-banner-placeholder"></div> on events.html only.
 -->
 
 <section class="event-banner" aria-label="Event notification banner">
     <div class="container">
         <div class="banner-content">
-            <!-- Status indicator with animated pulse -->
+            <!-- Status indicator with animated pulse (cyber / hacker theme) -->
             <div class="banner-status" id="banner-status">
                 <span class="status-dot"></span>
                 <span class="status-text">Upcoming Event</span>
             </div>
             
-            <!-- Main event info -->
+            <!-- Main event info (filled by script.js) -->
             <div class="banner-event-info">
                 <h2 id="banner-event-name">DeenSec CTF 2026</h2>
                 <div class="banner-meta">
@@ -30,7 +31,7 @@
                 </div>
             </div>
             
-            <!-- Call to action button -->
+            <!-- Call to action button (link and text from data.js) -->
             <div class="banner-action">
                 <a href="#" id="banner-cta-button" class="btn btn-glow" target="_blank" rel="noopener noreferrer">
                     Register Now <i class="fas fa-arrow-right"></i>
