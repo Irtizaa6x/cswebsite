@@ -1,19 +1,18 @@
 /**
- * data.js – Central Content for GUCC Cyber Security Society (Professional Build)
+ * data.js – Central Content for GUCC Cyber Security Society
  * 
- * This file contains ALL dynamic data for the website.
- * Edit this ONE file to update events, committee members, blogs, stats, FAQs, favicon, etc.
- * No need to touch any HTML or other JS files for content changes.
+ * Edit this ONE file to update events, committee, blogs, stats, FAQs, favicon, etc.
+ * No need to touch HTML or other JS files.
  */
 
 const siteData = {
-    // ==================== FAVICON (Single source of truth) ====================
+    // ==================== FAVICON ====================
     favicon: {
-        path: "logo.png",   // Place your favicon.png in the root folder
+        path: "logo.png",      // Uses your existing logo.png as favicon
         type: "image/png"
     },
 
-    // ==================== PAGE HEADERS (Titles & Subtitles) ====================
+    // ==================== PAGE HEADERS ====================
     pageHeaders: {
         events: {
             title: "Our Events",
@@ -37,17 +36,17 @@ const siteData = {
         }
     },
 
-    // ==================== ACTIVE EVENT (for banner on events page) ====================
+    // ==================== ACTIVE EVENT (Banner) ====================
     activeEvent: {
         name: "DeenSec CTF 2026",
         date: "June 10, 2026",
         location: "Online + GUCC Campus",
-        status: "upcoming",   // "upcoming" or "running"
+        status: "upcoming",
         ctaLink: "https://forms.google.com/your-registration-form",
         ctaText: "Register Now"
     },
 
-    // ==================== COUNTDOWN TARGET (for homepage) ====================
+    // ==================== COUNTDOWN TARGET ====================
     countdownTarget: "2026-06-10T00:00:00",
 
     // ==================== FEATURES (Homepage) ====================
@@ -69,7 +68,7 @@ const siteData = {
         }
     ],
 
-    // ==================== STATISTICS (Homepage) ====================
+    // ==================== STATISTICS ====================
     stats: [
         { label: "Workshops", value: 12 },
         { label: "CTF Events", value: 8 },
@@ -77,7 +76,7 @@ const siteData = {
         { label: "Seminars", value: 6 }
     ],
 
-    // ==================== ACTIVITIES (Homepage & About page) ====================
+    // ==================== ACTIVITIES ====================
     activities: [
         {
             icon: "fa-chalkboard-user",
@@ -111,7 +110,7 @@ const siteData = {
         }
     ],
 
-    // ==================== EVENTS (Compact – date as simple string) ====================
+    // ==================== EVENTS (Compact) ====================
     events: [
         {
             title: "DeenSec CTF 2026",
@@ -187,7 +186,7 @@ const siteData = {
         }
     ],
 
-    // ==================== BLOGS (Blogs page) ====================
+    // ==================== BLOGS ====================
     blogs: [
         {
             id: 1,
@@ -260,57 +259,137 @@ const siteData = {
         imageAlt: "Cyber Security Team"
     },
 
-    // ==================== COMMITTEE GROUPS ====================
-    committeeGroups: [
-        {
-            groupName: "Moderator Team",
-            icon: "fa-gavel",
+    // ==================== COMMITTEE GROUPS (Hierarchical + Detailed) ====================
+    committeeGroups: {
+        moderator: {
             members: [
-                { name: "Md. Monirul Islam", role: "Moderator", department: "" },
-                { name: "Montaser Abdul Quader", role: "Deputy Moderator", department: "" },
-                { name: "Feroza Nazin", role: "Deputy Moderator", department: "" }
+                { 
+                    name: "Md. Monirul Islam", 
+                    role: "Moderator", 
+                    email: "monirul@green.edu.bd", 
+                    phone: "+880 1700 000001", 
+                    image: "https://randomuser.me/api/portraits/men/1.jpg" 
+                }
             ]
         },
-        {
-            groupName: "Executive Committee",
-            icon: "fa-crown",
-            members: [
-                { name: "Mahady Hasan Fahim", role: "Chair", department: "" },
-                { name: "Md. Robiul Islam", role: "Vice Chair", department: "" },
-                { name: "Ashrafun Nahar Arifa", role: "General Secretary", department: "" },
-                { name: "Thiaba Rahman Methi", role: "Treasurer", department: "" }
-            ]
-        },
-        {
-            groupName: "Secretaries",
-            icon: "fa-tasks",
-            members: [
-                { name: "Nuren Abreshum Anonta", role: "Red Team Secretary", department: "" },
-                { name: "Md. Tanvir Hasan Abokash", role: "Organizing Secretary", department: "" },
-                { name: "Shoaib", role: "CTF Secretary", department: "" },
-                { name: "Abdullah", role: "Blue Team Secretary", department: "" }
-            ]
-        },
-        {
-            groupName: "Multimedia Specialists",
-            icon: "fa-video",
-            members: [
-                { name: "Rezanur Rahman Anan", role: "Multimedia Specialist", department: "" },
-                { name: "Md. Tarikul Islam Tuhen", role: "Multimedia Specialist", department: "" },
-                { name: "Shahta Jarab", role: "Multimedia Specialist", department: "" }
-            ]
-        },
-        {
-            groupName: "Executive Members",
-            icon: "fa-users",
-            members: [
-                { name: "Romana Zaman", role: "Executive Member", department: "" },
-                { name: "Md. Arman Hossain Rifat", role: "Executive Member", department: "" }
-            ]
-        }
-    ],
+        deputyModerators: [
+            { 
+                name: "Montaser Abdul Quader", 
+                role: "Deputy Moderator", 
+                email: "montaser@green.edu.bd", 
+                phone: "+880 1700 000002", 
+                image: "https://randomuser.me/api/portraits/men/2.jpg" 
+            },
+            { 
+                name: "Feroza Nazin", 
+                role: "Deputy Moderator", 
+                email: "feroza@green.edu.bd", 
+                phone: "+880 1700 000003", 
+                image: "https://randomuser.me/api/portraits/women/1.jpg" 
+            }
+        ],
+        executiveCommittee: [
+            { 
+                name: "Mahady Hasan Fahim", 
+                role: "Chair", 
+                email: "fahim@gucc.edu.bd", 
+                phone: "+880 1700 000004", 
+                image: "https://randomuser.me/api/portraits/men/3.jpg" 
+            },
+            { 
+                name: "Md. Robiul Islam", 
+                role: "Vice Chair", 
+                email: "robiul@gucc.edu.bd", 
+                phone: "+880 1700 000005", 
+                image: "https://randomuser.me/api/portraits/men/4.jpg" 
+            },
+            { 
+                name: "Ashrafun Nahar Arifa", 
+                role: "General Secretary", 
+                email: "arifa@gucc.edu.bd", 
+                phone: "+880 1700 000006", 
+                image: "https://randomuser.me/api/portraits/women/2.jpg" 
+            },
+            { 
+                name: "Thiaba Rahman Methi", 
+                role: "Treasurer", 
+                email: "methi@gucc.edu.bd", 
+                phone: "+880 1700 000007", 
+                image: "https://randomuser.me/api/portraits/women/3.jpg" 
+            }
+        ],
+        secretaries: [
+            { 
+                name: "Nuren Abreshum Anonta", 
+                role: "Red Team Secretary", 
+                email: "nuren@gucc.edu.bd", 
+                phone: "+880 1700 000008", 
+                image: "https://randomuser.me/api/portraits/women/4.jpg" 
+            },
+            { 
+                name: "Md. Tanvir Hasan Abokash", 
+                role: "Organizing Secretary", 
+                email: "tanvir@gucc.edu.bd", 
+                phone: "+880 1700 000009", 
+                image: "https://randomuser.me/api/portraits/men/5.jpg" 
+            },
+            { 
+                name: "Shoaib", 
+                role: "CTF Secretary", 
+                email: "shoaib@gucc.edu.bd", 
+                phone: "+880 1700 000010", 
+                image: "https://randomuser.me/api/portraits/men/6.jpg" 
+            },
+            { 
+                name: "Abdullah", 
+                role: "Blue Team Secretary", 
+                email: "abdullah@gucc.edu.bd", 
+                phone: "+880 1700 000011", 
+                image: "https://randomuser.me/api/portraits/men/7.jpg" 
+            }
+        ],
+        multimedia: [
+            { 
+                name: "Rezanur Rahman Anan", 
+                role: "Multimedia Specialist", 
+                email: "anan@gucc.edu.bd", 
+                phone: "+880 1700 000012", 
+                image: "https://randomuser.me/api/portraits/men/8.jpg" 
+            },
+            { 
+                name: "Md. Tarikul Islam Tuhen", 
+                role: "Multimedia Specialist", 
+                email: "tuhen@gucc.edu.bd", 
+                phone: "+880 1700 000013", 
+                image: "https://randomuser.me/api/portraits/men/9.jpg" 
+            },
+            { 
+                name: "Shahta Jarab", 
+                role: "Multimedia Specialist", 
+                email: "jarab@gucc.edu.bd", 
+                phone: "+880 1700 000014", 
+                image: "https://randomuser.me/api/portraits/men/10.jpg" 
+            }
+        ],
+        executiveMembers: [
+            { 
+                name: "Romana Zaman", 
+                role: "Executive Member", 
+                email: "romana@gucc.edu.bd", 
+                phone: "+880 1700 000015", 
+                image: "https://randomuser.me/api/portraits/women/5.jpg" 
+            },
+            { 
+                name: "Md. Arman Hossain Rifat", 
+                role: "Executive Member", 
+                email: "arman@gucc.edu.bd", 
+                phone: "+880 1700 000016", 
+                image: "https://randomuser.me/api/portraits/men/11.jpg" 
+            }
+        ]
+    },
 
-    // ==================== CONTACT INFO CARDS ====================
+    // ==================== CONTACT INFO ====================
     contactInfo: [
         {
             icon: "fa-map-marker-alt",
@@ -329,7 +408,7 @@ const siteData = {
         }
     ],
 
-    // ==================== SOCIAL LINKS (Contact page) ====================
+    // ==================== SOCIAL LINKS ====================
     socialLinks: [
         { platform: "Facebook", url: "https://www.facebook.com/share/1SPjmR4Rud/", icon: "fab fa-facebook-f" },
         { platform: "WhatsApp", url: "https://chat.whatsapp.com/HrT836SLXMlDaeKJR9AGmx", icon: "fab fa-whatsapp" },
@@ -338,7 +417,7 @@ const siteData = {
         { platform: "GitHub", url: "https://github.com/gucc-cyber", icon: "fab fa-github" }
     ],
 
-    // ==================== FAQ (Contact page) ====================
+    // ==================== FAQ ====================
     faq: [
         {
             icon: "fa-question-circle",
