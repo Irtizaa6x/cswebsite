@@ -1,18 +1,19 @@
 /**
- * data.js – Central Content for GUCC Cyber Security Society
+ * data.js – Central Content for GUCC Cyber Security Society (Final Build)
  * 
+ * This file contains ALL dynamic data for the website.
  * Edit this ONE file to update events, committee, blogs, stats, FAQs, favicon, etc.
- * No need to touch HTML or other JS files.
+ * No need to touch HTML or other JS files for content changes.
  */
 
 const siteData = {
-    // ==================== FAVICON ====================
+    // ==================== FAVICON (Uses your existing logo.png) ====================
     favicon: {
-        path: "logo.png",      // Uses your existing logo.png as favicon
+        path: "logo.png",
         type: "image/png"
     },
 
-    // ==================== PAGE HEADERS ====================
+    // ==================== PAGE HEADERS (Titles & Subtitles) ====================
     pageHeaders: {
         events: {
             title: "Our Events",
@@ -36,17 +37,17 @@ const siteData = {
         }
     },
 
-    // ==================== ACTIVE EVENT (Banner) ====================
+    // ==================== ACTIVE EVENT (for banner on events page) ====================
     activeEvent: {
         name: "DeenSec CTF 2026",
         date: "June 10, 2026",
         location: "Online + GUCC Campus",
-        status: "upcoming",
+        status: "upcoming",   // "upcoming" or "running"
         ctaLink: "https://forms.google.com/your-registration-form",
         ctaText: "Register Now"
     },
 
-    // ==================== COUNTDOWN TARGET ====================
+    // ==================== COUNTDOWN TARGET (for homepage) ====================
     countdownTarget: "2026-06-10T00:00:00",
 
     // ==================== FEATURES (Homepage) ====================
@@ -68,7 +69,7 @@ const siteData = {
         }
     ],
 
-    // ==================== STATISTICS ====================
+    // ==================== STATISTICS (Homepage) ====================
     stats: [
         { label: "Workshops", value: 12 },
         { label: "CTF Events", value: 8 },
@@ -76,7 +77,7 @@ const siteData = {
         { label: "Seminars", value: 6 }
     ],
 
-    // ==================== ACTIVITIES ====================
+    // ==================== ACTIVITIES (Homepage & About page) ====================
     activities: [
         {
             icon: "fa-chalkboard-user",
@@ -110,7 +111,7 @@ const siteData = {
         }
     ],
 
-    // ==================== EVENTS (Compact) ====================
+    // ==================== EVENTS (Compact – date as simple string) ====================
     events: [
         {
             title: "DeenSec CTF 2026",
@@ -292,28 +293,28 @@ const siteData = {
             { 
                 name: "Mahady Hasan Fahim", 
                 role: "Chair", 
-                email: "fahim@gucc.edu.bd", 
+                email: "fahim@gucs.ac.bd", 
                 phone: "+880 1700 000004", 
                 image: "https://randomuser.me/api/portraits/men/3.jpg" 
             },
             { 
                 name: "Md. Robiul Islam", 
                 role: "Vice Chair", 
-                email: "robiul@gucc.edu.bd", 
+                email: "robiul@gucs.ac.bd", 
                 phone: "+880 1700 000005", 
                 image: "https://randomuser.me/api/portraits/men/4.jpg" 
             },
             { 
                 name: "Ashrafun Nahar Arifa", 
                 role: "General Secretary", 
-                email: "arifa@gucc.edu.bd", 
+                email: "arifa@gucs.ac.bd", 
                 phone: "+880 1700 000006", 
                 image: "https://randomuser.me/api/portraits/women/2.jpg" 
             },
             { 
                 name: "Thiaba Rahman Methi", 
                 role: "Treasurer", 
-                email: "methi@gucc.edu.bd", 
+                email: "methi@gucs.ac.bd", 
                 phone: "+880 1700 000007", 
                 image: "https://randomuser.me/api/portraits/women/3.jpg" 
             }
@@ -322,28 +323,28 @@ const siteData = {
             { 
                 name: "Nuren Abreshum Anonta", 
                 role: "Red Team Secretary", 
-                email: "nuren@gucc.edu.bd", 
+                email: "nuren@gucs.ac.bd", 
                 phone: "+880 1700 000008", 
                 image: "https://randomuser.me/api/portraits/women/4.jpg" 
             },
             { 
                 name: "Md. Tanvir Hasan Abokash", 
                 role: "Organizing Secretary", 
-                email: "tanvir@gucc.edu.bd", 
+                email: "tanvir@gucs.ac.bd", 
                 phone: "+880 1700 000009", 
                 image: "https://randomuser.me/api/portraits/men/5.jpg" 
             },
             { 
                 name: "Shoaib", 
                 role: "CTF Secretary", 
-                email: "shoaib@gucc.edu.bd", 
+                email: "shoaib@gucs.ac.bd", 
                 phone: "+880 1700 000010", 
                 image: "https://randomuser.me/api/portraits/men/6.jpg" 
             },
             { 
                 name: "Abdullah", 
                 role: "Blue Team Secretary", 
-                email: "abdullah@gucc.edu.bd", 
+                email: "abdullah@gucs.ac.bd", 
                 phone: "+880 1700 000011", 
                 image: "https://randomuser.me/api/portraits/men/7.jpg" 
             }
@@ -352,21 +353,21 @@ const siteData = {
             { 
                 name: "Rezanur Rahman Anan", 
                 role: "Multimedia Specialist", 
-                email: "anan@gucc.edu.bd", 
+                email: "anan@gucs.ac.bd", 
                 phone: "+880 1700 000012", 
                 image: "https://randomuser.me/api/portraits/men/8.jpg" 
             },
             { 
                 name: "Md. Tarikul Islam Tuhen", 
                 role: "Multimedia Specialist", 
-                email: "tuhen@gucc.edu.bd", 
+                email: "tuhen@gucs.ac.bd", 
                 phone: "+880 1700 000013", 
                 image: "https://randomuser.me/api/portraits/men/9.jpg" 
             },
             { 
                 name: "Shahta Jarab", 
                 role: "Multimedia Specialist", 
-                email: "jarab@gucc.edu.bd", 
+                email: "jarab@gucs.ac.bd", 
                 phone: "+880 1700 000014", 
                 image: "https://randomuser.me/api/portraits/men/10.jpg" 
             }
@@ -375,21 +376,21 @@ const siteData = {
             { 
                 name: "Romana Zaman", 
                 role: "Executive Member", 
-                email: "romana@gucc.edu.bd", 
+                email: "romana@gucs.ac.bd", 
                 phone: "+880 1700 000015", 
                 image: "https://randomuser.me/api/portraits/women/5.jpg" 
             },
             { 
                 name: "Md. Arman Hossain Rifat", 
                 role: "Executive Member", 
-                email: "arman@gucc.edu.bd", 
+                email: "arman@gucs.ac.bd", 
                 phone: "+880 1700 000016", 
                 image: "https://randomuser.me/api/portraits/men/11.jpg" 
             }
         ]
     },
 
-    // ==================== CONTACT INFO ====================
+    // ==================== CONTACT INFO CARDS ====================
     contactInfo: [
         {
             icon: "fa-map-marker-alt",
@@ -399,7 +400,7 @@ const siteData = {
         {
             icon: "fa-envelope",
             title: "Email Us",
-            details: "info@gucc.edu.bd<br>cyber@green.edu.bd"
+            details: "info@gucs.ac.bd<br>cyber@green.edu.bd"
         },
         {
             icon: "fa-phone-alt",
@@ -408,7 +409,7 @@ const siteData = {
         }
     ],
 
-    // ==================== SOCIAL LINKS ====================
+    // ==================== SOCIAL LINKS (Contact page) ====================
     socialLinks: [
         { platform: "Facebook", url: "https://www.facebook.com/share/1SPjmR4Rud/", icon: "fab fa-facebook-f" },
         { platform: "WhatsApp", url: "https://chat.whatsapp.com/HrT836SLXMlDaeKJR9AGmx", icon: "fab fa-whatsapp" },
@@ -417,7 +418,7 @@ const siteData = {
         { platform: "GitHub", url: "https://github.com/gucc-cyber", icon: "fab fa-github" }
     ],
 
-    // ==================== FAQ ====================
+    // ==================== FAQ (Contact page) ====================
     faq: [
         {
             icon: "fa-question-circle",
