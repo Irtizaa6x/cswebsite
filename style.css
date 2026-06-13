@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background: #0a0a0f;
@@ -72,7 +76,6 @@ body::after {
     --transition: all 0.3s ease;
     --shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
     --border-glow: 0 0 15px rgba(0, 217, 255, 0.2);
-    --glitch-offset: 2px;
 }
 
 /* ==================== TYPOGRAPHY ==================== */
@@ -81,19 +84,9 @@ h1, h2, h3, h4 {
     line-height: 1.2;
 }
 
-h1 {
-    font-size: 3.5rem;
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
-}
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
 
 .section-header {
     text-align: center;
@@ -159,11 +152,9 @@ h3 {
 }
 
 @keyframes glitch-skew {
-    0% { transform: skew(0deg); }
-    20% { transform: skew(0deg); }
+    0%, 20%, 100% { transform: skew(0deg); }
     21% { transform: skew(1deg); }
     22% { transform: skew(0deg); }
-    100% { transform: skew(0deg); }
 }
 
 @keyframes glitch-shift {
@@ -345,13 +336,10 @@ h3 {
     position: relative;
 }
 
-.page-header-content {
-    position: relative;
-}
+.page-header-content { position: relative; }
 
 .header-decor {
     position: absolute;
-    top: 0;
     font-size: 1rem;
     font-family: monospace;
     color: var(--primary);
@@ -369,13 +357,8 @@ h3 {
     top: auto;
 }
 
-.bracket {
-    color: var(--primary);
-}
-
-.tag {
-    color: var(--gray);
-}
+.bracket { color: var(--primary); }
+.tag { color: var(--gray); }
 
 .title-underline {
     width: 100px;
@@ -474,7 +457,7 @@ h3 {
     margin-right: 5px;
 }
 
-/* ==================== HERO SECTION (homepage) ==================== */
+/* ==================== HERO SECTION ==================== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -509,7 +492,6 @@ h3 {
     background-clip: text;
     color: transparent;
     margin-bottom: 1rem;
-    /* Typing effect */
     overflow: hidden;
     border-right: 2px solid var(--primary);
     white-space: nowrap;
@@ -582,7 +564,7 @@ h3 {
     50% { transform: translateY(10px); }
 }
 
-/* ==================== FEATURES, STATS, ACTIVITIES CARDS ==================== */
+/* ==================== FEATURES, STATS, ACTIVITIES ==================== */
 .features, .stats, .activities {
     padding: 80px 0;
     background: var(--dark);
@@ -601,7 +583,6 @@ h3 {
     padding: 30px;
     transition: var(--transition);
     border: 1px solid var(--card-border);
-    animation: fadeInUp 0.6s ease backwards;
 }
 
 .feature-card:hover, .activity-card:hover, .member-card:hover, .blog-card:hover {
@@ -661,7 +642,6 @@ h3 {
     padding: 1.2rem;
     border: 1px solid var(--card-border);
     transition: all 0.25s ease;
-    animation: fadeInUp 0.5s ease backwards;
 }
 
 .event-card-compact:hover {
@@ -727,32 +707,20 @@ h3 {
 }
 
 /* ==================== BLOG CARDS ==================== */
-.blog-card {
-    padding: 0;
-    overflow: hidden;
-}
-
+.blog-card { padding: 0; overflow: hidden; }
 .blog-image {
     width: 100%;
     height: 200px;
     overflow: hidden;
 }
-
 .blog-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
 }
-
-.blog-card:hover .blog-image img {
-    transform: scale(1.05);
-}
-
-.blog-content {
-    padding: 20px;
-}
-
+.blog-card:hover .blog-image img { transform: scale(1.05); }
+.blog-content { padding: 20px; }
 .blog-category {
     font-size: 0.7rem;
     color: var(--primary);
@@ -760,7 +728,6 @@ h3 {
     letter-spacing: 1px;
     font-weight: 600;
 }
-
 .read-more {
     color: var(--primary);
     text-decoration: none;
@@ -772,11 +739,7 @@ h3 {
     margin-top: 10px;
     font-size: 0.85rem;
 }
-
-.read-more:hover {
-    gap: 10px;
-    text-shadow: 0 0 3px var(--primary-glow);
-}
+.read-more:hover { gap: 10px; text-shadow: 0 0 3px var(--primary-glow); }
 
 /* ==================== ABOUT PAGE ==================== */
 .about-grid {
@@ -786,7 +749,6 @@ h3 {
     align-items: center;
     margin-bottom: 60px;
 }
-
 .about-list {
     list-style: none;
     margin: 1.5rem 0;
@@ -794,35 +756,28 @@ h3 {
     grid-template-columns: 1fr 1fr;
     gap: 12px;
 }
-
 .about-list li {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 0.95rem;
 }
-
-.about-list li i {
-    color: var(--primary);
-}
-
+.about-list li i { color: var(--primary); }
 .about-image img {
     width: 100%;
     border-radius: 20px;
     box-shadow: var(--shadow);
 }
 
-/* ==================== COMMITTEE HIERARCHY STYLES ==================== */
+/* ==================== COMMITTEE HORIZONTAL CARDS & HIERARCHY ==================== */
 .committee-hierarchy {
     padding: 60px 0;
     background: var(--dark);
 }
-
 .hierarchy-level {
     margin-bottom: 60px;
     text-align: center;
 }
-
 .level-title {
     font-size: 1.8rem;
     color: var(--primary);
@@ -831,7 +786,6 @@ h3 {
     padding-left: 15px;
     text-align: left;
 }
-
 .members-horizontal {
     display: flex;
     flex-wrap: wrap;
@@ -839,89 +793,88 @@ h3 {
     gap: 30px;
 }
 
-/* Detailed member card (larger image, contact info) */
+/* Horizontal card layout */
 .member-card-detailed {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
     background: var(--card-bg);
     backdrop-filter: blur(8px);
-    border-radius: 20px;
-    padding: 25px;
-    width: 260px;
-    text-align: center;
-    transition: var(--transition);
+    border-radius: 24px;
     border: 1px solid var(--card-border);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.6s ease;
 }
-
+.member-card-detailed.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
 .member-card-detailed:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     border-color: var(--primary);
-    box-shadow: 0 0 25px rgba(0, 217, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.25);
 }
 
 .member-img-wrapper {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 15px;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    background: rgba(0, 217, 255, 0.15);
     border-radius: 50%;
-    overflow: hidden;
-    background: rgba(0, 217, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.member-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .member-img-wrapper i {
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--primary);
 }
 
-.member-card-detailed h4 {
+.member-info { flex: 1; }
+.member-info h4 {
     font-size: 1.2rem;
-    margin-bottom: 5px;
+    margin: 0 0 4px 0;
+    color: var(--light);
 }
-
 .member-role {
     color: var(--primary);
     font-weight: 600;
-    font-size: 0.85rem;
-    margin-bottom: 12px;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
 }
-
 .member-contact {
     font-size: 0.7rem;
     color: var(--gray);
-    margin: 5px 0;
+    margin: 4px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 6px;
+    gap: 8px;
 }
-
 .member-contact i {
     color: var(--primary);
-    width: 16px;
+    width: 18px;
+    font-size: 0.75rem;
 }
 
-/* Executive tree (power hierarchy) */
+/* Executive tree layout */
 .exec-tree-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
-
 .exec-row {
     display: flex;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
 }
-
 .exec-connector {
     width: 2px;
     height: 30px;
@@ -929,12 +882,28 @@ h3 {
     box-shadow: 0 0 6px var(--primary-glow);
 }
 
-/* Secretaries grid */
-.secretaries-grid {
+/* Secretaries & other groups */
+.secretaries-grid,
+.committee-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 24px;
+}
+.committee-group { margin-top: 60px; }
+
+/* Responsive committee cards */
+@media (max-width: 640px) {
+    .member-card-detailed {
+        flex-direction: column;
+        text-align: center;
+        max-width: 100%;
+    }
+    .member-info { text-align: center; }
+    .member-contact { justify-content: center; }
+    .secretaries-grid,
+    .committee-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ==================== CONTACT PAGE ==================== */
@@ -944,7 +913,6 @@ h3 {
     gap: 50px;
     margin-bottom: 60px;
 }
-
 .contact-card {
     display: flex;
     flex-direction: column;
@@ -957,29 +925,22 @@ h3 {
     margin-bottom: 25px;
     transition: var(--transition);
 }
-
 .contact-card:hover {
     border-color: var(--primary);
     transform: translateY(-3px);
 }
-
 .contact-card i {
     font-size: 2rem;
     color: var(--primary);
     margin-bottom: 1rem;
 }
-
 .contact-form {
     background: var(--card-bg);
     padding: 35px;
     border-radius: 20px;
     border: 1px solid var(--card-border);
 }
-
-.form-group {
-    margin-bottom: 20px;
-}
-
+.form-group { margin-bottom: 20px; }
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 14px 18px;
@@ -991,20 +952,17 @@ h3 {
     font-size: 1rem;
     transition: var(--transition);
 }
-
 .form-group input:focus, .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 8px rgba(0, 217, 255, 0.3);
 }
-
 .faq-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
-
 .faq-card {
     background: var(--card-bg);
     padding: 25px;
@@ -1012,7 +970,6 @@ h3 {
     border: 1px solid var(--card-border);
     transition: var(--transition);
 }
-
 .faq-card:hover {
     border-color: var(--primary);
     transform: translateY(-3px);
@@ -1025,14 +982,12 @@ h3 {
     border-top: 1px solid rgba(0, 217, 255, 0.2);
     margin-top: 60px;
 }
-
 .footer-content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
     gap: 40px;
     margin-bottom: 40px;
 }
-
 .footer-logo .logo-icon {
     width: 50px;
     height: 50px;
@@ -1043,56 +998,42 @@ h3 {
     justify-content: center;
     margin-bottom: 1rem;
 }
-
 .footer-logo .logo-icon i {
     font-size: 1.5rem;
     color: var(--primary);
 }
-
 .footer-logo h3 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
-
 .footer-logo p {
     color: var(--gray);
     font-size: 0.9rem;
     max-width: 300px;
 }
-
 .footer-links h4 {
     margin-bottom: 1rem;
     color: var(--primary);
     font-size: 1.1rem;
 }
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 0.6rem;
-}
-
+.footer-links ul { list-style: none; }
+.footer-links li { margin-bottom: 0.6rem; }
 .footer-links a {
     color: var(--gray);
     text-decoration: none;
     transition: var(--transition);
     font-size: 0.9rem;
 }
-
 .footer-links a:hover {
     color: var(--primary);
     padding-left: 5px;
 }
-
 .social-links {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
-
 .social-links a {
     width: 40px;
     height: 40px;
@@ -1105,20 +1046,17 @@ h3 {
     font-size: 1.2rem;
     transition: var(--transition);
 }
-
 .social-links a:hover {
     background: var(--primary);
     color: var(--darker);
     transform: translateY(-3px);
     box-shadow: 0 0 10px var(--primary-glow);
 }
-
 .copyright {
     font-size: 0.8rem;
     color: var(--gray);
     margin-top: 20px;
 }
-
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
@@ -1127,16 +1065,19 @@ h3 {
     font-size: 0.8rem;
 }
 
-/* ==================== GLOBAL ANIMATIONS ==================== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* ==================== SCROLL REVEAL ANIMATIONS (Additional) ==================== */
+.feature-card, .activity-card, .event-card-compact, .blog-card, .contact-card, .faq-card,
+.hierarchy-level, .secretaries-grid .member-card-detailed, .exec-row .member-card-detailed {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.6s ease;
+}
+.feature-card.revealed, .activity-card.revealed, .event-card-compact.revealed,
+.blog-card.revealed, .contact-card.revealed, .faq-card.revealed,
+.hierarchy-level.revealed, .secretaries-grid .member-card-detailed.revealed,
+.exec-row .member-card-detailed.revealed {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ==================== RESPONSIVE DESIGN ==================== */
@@ -1144,22 +1085,15 @@ h3 {
     h1 { font-size: 3rem; }
     h2 { font-size: 2rem; }
     .hero-title { font-size: 2.8rem; }
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
+    .footer-content { grid-template-columns: 1fr 1fr; gap: 30px; }
 }
-
 @media (max-width: 768px) {
     h1 { font-size: 2.2rem; }
     h2 { font-size: 1.8rem; }
     .hero-title { font-size: 2rem; }
     .hero-subtitle { font-size: 1.2rem; }
     
-    .nav-toggle {
-        display: block;
-    }
-    
+    .nav-toggle { display: block; }
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -1175,80 +1109,25 @@ h3 {
         gap: 2rem;
         z-index: 999;
     }
+    .nav-menu.active { left: 0; }
     
-    .nav-menu.active {
-        left: 0;
-    }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .footer-content { grid-template-columns: 1fr; text-align: center; }
+    .footer-logo p { margin: 0 auto; }
     
-    .about-grid, .contact-grid {
-        grid-template-columns: 1fr;
-    }
+    .countdown-wrapper { gap: 15px; }
+    .countdown-item { min-width: 70px; padding: 12px; }
+    .countdown-number { font-size: 1.5rem; }
     
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .footer-logo p {
-        margin: 0 auto;
-    }
-    
-    .countdown-wrapper {
-        gap: 15px;
-    }
-    
-    .countdown-item {
-        min-width: 70px;
-        padding: 12px;
-    }
-    
-    .countdown-number {
-        font-size: 1.5rem;
-    }
-    
-    .banner-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .banner-meta {
-        flex-direction: column;
-        gap: 8px;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .btn {
-        width: 200px;
-        justify-content: center;
-    }
-
-    .events-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .exec-row {
-        gap: 20px;
-    }
-    .member-card-detailed {
-        width: 100%;
-        max-width: 280px;
-    }
+    .banner-content { flex-direction: column; text-align: center; }
+    .banner-meta { flex-direction: column; gap: 8px; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .btn { width: 200px; justify-content: center; }
+    .events-grid { grid-template-columns: 1fr; }
+    .exec-row { gap: 20px; }
 }
-
 @media (max-width: 480px) {
-    .container {
-        padding: 0 16px;
-    }
-    
-    .feature-card, .activity-card, .member-card {
-        padding: 20px;
-    }
-    
-    .ctf-promo-card {
-        padding: 30px 20px;
-    }
+    .container { padding: 0 16px; }
+    .feature-card, .activity-card, .member-card { padding: 20px; }
+    .ctf-promo-card { padding: 30px 20px; }
 }
