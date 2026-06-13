@@ -1,7 +1,9 @@
-<!-- ==================== PAGE HEADER COMPONENT (Enhanced) ==================== -->
+<!-- ==================== PAGE HEADER COMPONENT ==================== -->
 <!-- 
-  This file contains a visually rich page header with hacker aesthetic.
-  Title and subtitle are filled automatically by script.js.
+  This file contains the hero banner that appears at the top of inner pages.
+  Title and subtitle are filled automatically by script.js from data.js.
+  Loaded dynamically into <div id="page-header-placeholder"></div>.
+  Not used on homepage.
 -->
 
 <section class="page-header" aria-label="Page header">
@@ -12,7 +14,7 @@
                 <span class="bracket">&lt;</span><span class="tag">hacker</span><span class="bracket">&gt;</span>
             </div>
             
-            <!-- Main title with glitch effect -->
+            <!-- Main title with glitch effect (3 layers for full effect) -->
             <h1 id="page-title" class="glitch-text" data-text="Page Title">
                 <span class="glitch-layer" aria-hidden="true">Page Title</span>
                 <span class="glitch-layer" aria-hidden="true">Page Title</span>
@@ -20,7 +22,7 @@
                 Page Title
             </h1>
             
-            <!-- Animated underline -->
+            <!-- Animated neon underline -->
             <div class="title-underline"></div>
             
             <!-- Subtitle -->
