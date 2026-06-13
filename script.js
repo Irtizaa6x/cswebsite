@@ -289,28 +289,25 @@ function renderAbout() {
 }
 
 // ==================== COMMITTEE PAGE RENDERING (Hierarchical) ====================
-function renderCommittee() {
-    if (!siteData.committeeGroups) return;
-
-    // Helper to render a single member card
-    function renderMemberCard(member) {
-        const imgHtml = member.image 
-            ? `<img src="${member.image}" alt="${member.name}" class="member-img">`
-            : `<i class="fas fa-user-circle"></i>`;
-        return `
-            <div class="member-card-detailed">
-                <div class="member-img-wrapper">${imgHtml}</div>
+function renderMemberCard(member) {
+    return `
+        <div class="member-card-detailed">
+            <div class="member-img-wrapper">
+                <i class="fas fa-user-astronaut"></i>
+            </div>
+            <div class="member-info">
                 <h4>${member.name}</h4>
                 <p class="member-role">${member.role}</p>
                 ${member.email ? `<p class="member-contact"><i class="fas fa-envelope"></i> ${member.email}</p>` : ''}
                 ${member.phone ? `<p class="member-contact"><i class="fas fa-phone-alt"></i> ${member.phone}</p>` : ''}
             </div>
-        `;
-    }
+        </div>
+    `;
+}
 
-    function renderMemberCards(members) {
-        return members.map(m => renderMemberCard(m)).join('');
-    }
+function renderMemberCards(members) {
+    return members.map(m => renderMemberCard(m)).join('');
+}
 
     // 1. Moderator
     const modContainer = document.getElementById('moderatorTree');
