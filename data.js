@@ -9,7 +9,7 @@
 const siteData = {
     // ==================== FAVICON (Single source of truth) ====================
     favicon: {
-        path: "favicon.png",   // Place your favicon.png in the root folder
+        path: "logo.png",   // Place your favicon.png in the root folder
         type: "image/png"
     },
 
