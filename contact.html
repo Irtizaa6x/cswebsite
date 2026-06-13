@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Fallback inline styles -->
+    <style>
+        body { background: #0a0a0f; color: #eef5ff; font-family: 'Inter', sans-serif; margin:0; padding:0; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .navbar, .footer { background: #050510; padding: 1rem; text-align: center; }
+        .btn { display: inline-block; padding: 12px 28px; background: #00d9ff; color: #050510; border-radius: 40px; text-decoration: none; }
+        .contact-form input, .contact-form textarea { background: rgba(255,255,255,0.1); border: 1px solid #00d9ff; color: #fff; padding: 10px; }
+    </style>
 </head>
 <body id="contact">
 
@@ -17,14 +25,14 @@
     <div id="navbar-placeholder"></div>
     <div id="page-header-placeholder"></div>
 
-    <!-- ==================== CONTACT SECTION ==================== -->
+    <!-- ==================== CONTACT SECTION (Dynamic Contact Info + Static Form) ==================== -->
     <section class="contact">
         <div class="container">
             <div class="contact-grid">
-                <!-- Left: Contact cards & social (dynamic) -->
+                <!-- Left side: Contact cards & social links (dynamic) -->
                 <div class="contact-info" id="contactInfo"></div>
                 
-                <!-- Right: Contact form (static) -->
+                <!-- Right side: Contact Form (static) -->
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
@@ -69,7 +77,7 @@
                     style="border:0; filter: grayscale(10%);" 
                     allowfullscreen="" 
                     loading="lazy" 
-                    title="Green University Campus Map">
+                    title="Green University of Bangladesh Campus Map">
                 </iframe>
                 <div class="map-address">
                     <p><i class="fas fa-map-marker-alt"></i> Green University of Bangladesh, Purbachal American City, Dhaka - 1229</p>
@@ -82,7 +90,7 @@
     <!-- ==================== FOOTER PLACEHOLDER ==================== -->
     <div id="footer-placeholder"></div>
 
-    <!-- Scripts -->
+    <!-- Scripts (order matters) -->
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
